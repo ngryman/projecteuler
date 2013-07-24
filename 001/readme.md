@@ -20,3 +20,10 @@ for (var i = 1; i <= 1000; i++) {
 console.log('answer:', sum);
 console.timeEnd('solved in');
 ```
+
+## Result
+
+```bash
+answer: 233168
+solved in: 1ms
+```
