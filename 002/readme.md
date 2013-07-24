@@ -36,6 +36,6 @@ console.timeEnd('solved in');
 ## Result
 
 ```bash
-answer: 233168
+answer: 4613732
 solved in: 1ms
 ```
