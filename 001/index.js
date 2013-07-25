@@ -1,12 +1,13 @@
 console.time('solved in');
 
-var sum = 0;
-
-for (var i = 1; i <= 1000; i++) {
-	if (0 === i % 3 || 0 === i % 5) {
-		sum += i;
+function resolve(max) {
+	for (var i = 1, sum = 0; i < max; i++) {
+		if (0 === i % 3 || 0 === i % 5) {
+			sum += i;
+		}
 	}
+	return sum;
 }
 
-console.log('answer:', sum);
+console.log('answer:', resolve(1000));
 console.timeEnd('solved in');
