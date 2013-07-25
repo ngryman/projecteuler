@@ -13,23 +13,18 @@ By considering the terms in the Fibonacci sequence whose values do not exceed fo
 ```javascript
 console.time('solved in');
 
-const MAX = 4e6;
-
-var sum = 2,
-	f1 = 1,
-	f2 = 2,
-	term = 3;
-
-while (true) {
-	f1 = f2;
-	f2 = term;
-	term = f1 + f2;
-
-	if (term >= MAX) break;
-	if (0 === term % 2) sum += term;
+function resolve(max) {
+	for (
+		var f1 = 1, f2 = 2, sum = 2, term = 3;
+		term < max;
+	    f1 = f2, f2 = term, term = f1 + f2
+	) {
+		if (0 === term % 2) sum += term;
+	}
+	return sum;
 }
 
-console.log('answer:', sum);
+console.log('answer:', resolve(4e6));
 console.timeEnd('solved in');
 ```
 
