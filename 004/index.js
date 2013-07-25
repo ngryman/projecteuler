@@ -11,5 +11,20 @@ function isPalindromic(n) {
 	return (origin == rev);
 }
 
-console.log('answer:', isPalindromic(101));
+function resolve() {
+	var product, max = 0;
+
+	for (var x = 999; x >= 900; x--) {
+		for (var y = 999; y >= 900; y--) {
+			product = x * y;
+			if (isPalindromic(product) && product > max) {
+				max = product;
+			}
+		}
+	}
+
+	return max;
+}
+
+console.log('answer:', resolve());
 console.timeEnd('solved in');
