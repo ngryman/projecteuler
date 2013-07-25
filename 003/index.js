@@ -1,9 +1,5 @@
 console.time('solved in');
 
-const N = 600851475143;
-
-var d = Math.floor(Math.sqrt(N));
-
 function isPrime(n) {
 	if (0 === n % 2) return false;
 
@@ -14,7 +10,14 @@ function isPrime(n) {
 	return true;
 }
 
-for ( ; d >= 2 && (0 !== N % d || !isPrime(d)); d--) ;
+function resolve(n) {
+	for (
+		var d = Math.floor(Math.sqrt(n));
+		d >= 2 && (0 !== n % d || !isPrime(d));
+		d--
+	);
+	return d;
+}
 
-console.log('answer:', d);
+console.log('answer:', resolve(600851475143));
 console.timeEnd('solved in');
